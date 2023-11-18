@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {   
+    [SerializeField] float mainThrust = 100f;
+    [SerializeField] float rotationThrust = 1f;
     Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,23 +24,31 @@ public class Movement : MonoBehaviour
     }
 
 
+    // Method for rocket to fly up
    void ProcessThrust()
    {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up);
+            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         }
    }
 
+    // Method for tocket to rotate left and right
    void ProcessRotation()
    {
           if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("Rotate left");
+            ApplyRotation(rotationThrust);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("Rotate Right");
+            ApplyRotation(-rotationThrust);
         }
+   }
+
+    // Method for rotation than PrecessRotation is using for turning our rocket
+   public void ApplyRotation(float rotationThisFrame)
+   {
+    transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
    }
 }
