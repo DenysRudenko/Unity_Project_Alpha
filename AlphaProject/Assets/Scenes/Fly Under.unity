@@ -382,10 +382,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1652820683064636234, guid: 1a02b368d54fb584e9707858c9c6a794, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1726209084312019152, guid: 1a02b368d54fb584e9707858c9c6a794, type: 3}
       propertyPath: m_Name
       value: BackgMusic
@@ -452,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a47874ff15c254f9197225b261eb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDeley: 2
 --- !u!1001 &16958878719262983
 PrefabInstance:
   m_ObjectHideFlags: 0

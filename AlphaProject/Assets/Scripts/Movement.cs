@@ -1,12 +1,15 @@
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-{
+{   
+    // Parameters
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust = 1f;
+    [SerializeField] AudioClip mainEngine;
     Rigidbody rb;
     AudioSource rocketSound;
     AudioSource backgroundMusic;
+    bool isAlive;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +42,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if (!rocketSound.isPlaying)
             {
-                rocketSound.Play();
+                rocketSound.PlayOneShot(mainEngine);
             }
         }
         else
