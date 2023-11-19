@@ -8,14 +8,19 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float levelLoadDeley = 2f;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
-
     AudioSource audioSource;
+    bool isTransitioning = false;
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
     }
   void OnCollisionEnter(Collision other)
     {
+        if (isTransitioning)
+        {
+            return;
+        }
+
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -38,6 +43,8 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {   
         // todo add particle effect upon crash
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDeley);
@@ -46,6 +53,8 @@ public class CollisionHandler : MonoBehaviour
     // created a deley method for next level loading
     void StartSuccessSequence()
     {   
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDeley);

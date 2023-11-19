@@ -431,24 +431,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a02b368d54fb584e9707858c9c6a794, type: 3}
---- !u!1 &2026205351 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5357272087694485583, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-  m_PrefabInstance: {fileID: 4225410389440148210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2026205359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026205351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a47874ff15c254f9197225b261eb4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelLoadDeley: 2
 --- !u!1001 &16958878719262983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,14 +618,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1378725854596092368, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b9fbe17ac4dde3645a742150cb92f7d6, type: 3}
-    - target: {fileID: 1378725854596092368, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5357272087694485583, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -691,10 +665,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5357272087694485583, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2026205359}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
