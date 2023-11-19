@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
 
     // Method for tocket to rotate left and right
    void ProcessRotation()
-   {
+   {    
           if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotationThrust);
@@ -49,6 +49,8 @@ public class Movement : MonoBehaviour
     // Method for rotation than PrecessRotation is using for turning our rocket
    public void ApplyRotation(float rotationThisFrame)
    {
+    rb.freezeRotation = true;   // freezing rotating so we can manually rotate
     transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+    rb.freezeRotation = false;  // unfreezing rotation so the physics system can take over
    }
 }
