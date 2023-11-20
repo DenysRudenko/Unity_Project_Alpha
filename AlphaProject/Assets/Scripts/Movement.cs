@@ -6,6 +6,11 @@ public class Movement : MonoBehaviour
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationThrust = 1f;
     [SerializeField] AudioClip mainEngine;
+
+    [SerializeField] ParticleSystem mainBoosterParticles;
+    [SerializeField] ParticleSystem leftBoosterParticles;
+    [SerializeField] ParticleSystem rightBoosterParticles;
+
     Rigidbody rb;
     AudioSource rocketSound;
     AudioSource backgroundMusic;
@@ -38,16 +43,23 @@ public class Movement : MonoBehaviour
     void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
-        {
+        {   
+            
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if (!rocketSound.isPlaying)
             {
                 rocketSound.PlayOneShot(mainEngine);
             }
+            if (!mainBoosterParticles.isPlaying)
+            {
+                mainBoosterParticles.Play();
+            }
+            
         }
         else
         {
             rocketSound.Stop();
+            mainBoosterParticles.Stop();
         }
     }
 
@@ -57,11 +69,26 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotationThrust);
+
+            if (!rightBoosterParticles.isPlaying)
+            {
+                rightBoosterParticles.Play();
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
             ApplyRotation(-rotationThrust);
+            if (!leftBoosterParticles.isPlaying)
+            {
+                leftBoosterParticles.Play();
+            }
         }
+        else 
+        {
+            rightBoosterParticles.Stop();
+            leftBoosterParticles.Stop();
+        }
+
     }
 
     // Method for rotation than ProcessRotation is using for turning our rocket
