@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class CollisionHandler : MonoBehaviour
 {   
     [SerializeField] float levelLoadDeley = 2f;
+    [SerializeField] float objectDestroyDeley = 2f;
+    int life = 100;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
+
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem crashParticles;
+
+    public Canvas canvas;
+
     AudioSource audioSource;
     bool isTransitioning = false;
 
+
     void Start(){
         audioSource = GetComponent<AudioSource>();
+        UpdateLifeText();
     }
   void OnCollisionEnter(Collision other)
     {
@@ -33,7 +45,13 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is fuel");
                 break;
             default:
-                StartCrashSequence();
+                life -= 50;
+                UpdateLifeText();
+
+                if (life == 0){
+                        StartCrashSequence();
+                        // Invoke("DisableGameObject", objectDestroyDeley);   
+                    }
                 break;
         }
     }
@@ -42,9 +60,9 @@ public class CollisionHandler : MonoBehaviour
     // created a deley method for reloading
     void StartCrashSequence()
     {   
-        // todo add particle effect upon crash
         isTransitioning = true;
         audioSource.Stop();
+        crashParticles.Play();
         audioSource.PlayOneShot(crash);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDeley);
@@ -55,6 +73,7 @@ public class CollisionHandler : MonoBehaviour
     {   
         isTransitioning = true;
         audioSource.Stop();
+        successParticles.Play();
         audioSource.PlayOneShot(success);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDeley);
@@ -78,5 +97,28 @@ public class CollisionHandler : MonoBehaviour
         }
 
         SceneManager.LoadScene(nextSceneIndex);
+    }
+
+     void DisableGameObject()
+    {
+        // Disable the GameObject  
+        gameObject.SetActive(false);
+
+    }
+
+    void UpdateLifeText()
+    {
+       if (canvas != null)
+        {
+            // Find the TextMeshPro component in the children of the canvas
+            TextMeshProUGUI lifeTextComponent = canvas.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (lifeTextComponent != null)
+            {
+                // Update the TextMeshPro component with the current life value
+                lifeTextComponent.text = "HP: " + life.ToString();
+            }
+            
+        }
     }
 }
