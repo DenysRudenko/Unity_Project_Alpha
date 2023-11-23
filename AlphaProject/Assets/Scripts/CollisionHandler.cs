@@ -9,22 +9,19 @@ public class CollisionHandler : MonoBehaviour
 {   
     [SerializeField] float levelLoadDeley = 2f;
     [SerializeField] float objectDestroyDeley = 2f;
-    int life = 100;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
-
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem crashParticles;
 
     public Canvas canvas;
-
+    public Health healthScript;
     AudioSource audioSource;
     bool isTransitioning = false;
 
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
-        UpdateLifeText();
     }
   void OnCollisionEnter(Collision other)
     {
@@ -45,18 +42,24 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is fuel");
                 break;
             default:
-                life -= 50;
-                UpdateLifeText();
-
-                if (life == 0){
-                        StartCrashSequence();
-                        // Invoke("DisableGameObject", objectDestroyDeley);   
-                    }
+                HeartLoss();
                 break;
         }
     }
 
 
+    void HeartLoss(){
+        
+        if (healthScript != null)
+        {   
+            healthScript.TakeDamage(1);
+
+            if(healthScript.maxHealth == 0) 
+            {
+                StartCrashSequence();
+            }            
+        }
+    }
     // created a deley method for reloading
     void StartCrashSequence()
     {   
@@ -104,21 +107,5 @@ public class CollisionHandler : MonoBehaviour
         // Disable the GameObject  
         gameObject.SetActive(false);
 
-    }
-
-    void UpdateLifeText()
-    {
-       if (canvas != null)
-        {
-            // Find the TextMeshPro component in the children of the canvas
-            TextMeshProUGUI lifeTextComponent = canvas.GetComponentInChildren<TextMeshProUGUI>();
-
-            if (lifeTextComponent != null)
-            {
-                // Update the TextMeshPro component with the current life value
-                lifeTextComponent.text = "HP: " + life.ToString();
-            }
-            
-        }
     }
 }

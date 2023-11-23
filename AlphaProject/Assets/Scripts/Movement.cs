@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
         // Start playing the background music on a loop
         backgroundMusic.loop = true;
         backgroundMusic.Play();
+
     }
 
     // Update is called once per frame
@@ -44,7 +45,6 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {   
-            
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if (!rocketSound.isPlaying)
             {

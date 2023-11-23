@@ -220,6 +220,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27f37e382e330640a933504aecf458b, type: 3}
+--- !u!114 &238034063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5985262189530130463, guid: f27f37e382e330640a933504aecf458b, type: 3}
+  m_PrefabInstance: {fileID: 238034062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &238034064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5831398378946620329, guid: f27f37e382e330640a933504aecf458b, type: 3}
+  m_PrefabInstance: {fileID: 238034062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &238034065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3411677859140617940, guid: f27f37e382e330640a933504aecf458b, type: 3}
+  m_PrefabInstance: {fileID: 238034062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &461363207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,6 +745,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 238034065}
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 238034064}
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 238034063}
     - target: {fileID: 1775580320051236102, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: canvas
       value: 
