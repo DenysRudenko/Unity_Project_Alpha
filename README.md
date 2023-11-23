@@ -9,15 +9,13 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
 
 ![website preview](AlphaProject/images/main.png)
 
-## Table of Contents 
-
 # Table of Contents
 - [1. Who will be interested in playing this game?](#interested)
     - [User Experience:](#user-exp)
     - [User Goals:](#user-goals)
     - [User Expectations:](#user-expectations)
     -	[Audio](#audio)
-    - [Prefabs](#prefabs)
+    - [Particles](#prefabs)
     - [Objects](#objects)
     - [Levels](#levels)
     - [Images](#images)
@@ -26,8 +24,7 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
     - [CollisionHandler script](#collision)
     - [Health](#health)
 - [3.Technologies used](#technologies-used)
-- [4.Testing](#testing)
-- [5.Bugs](#bugs)
+- [4.Bugs](#bugs)
 - [6. GitHub](#git)
 - [7. Information](#acknowledgement)
 - [8. Future](#future)
@@ -69,7 +66,7 @@ The main user Expectations:
 
 In our Unity game, cool space music kicks in the moment your mission begins. 
 
-<a name="prefabs"></a>
+<a name="particles"></a>
 ## 1.5 Prefabs
   [Go to the top](#table-of-contents)
 
@@ -100,7 +97,7 @@ There is a 4 main objects at that moment:
 * Obstacle
 
 ![Rocket and Launch box](AlphaProject/images/rocketLaunch.png)
-![Landing box](AlphaProject/images/engline.png)
+![Landing box](AlphaProject/images/landing.png)
 ![Obstacle](AlphaProject/images/obtacle.png)
 
 <a name="introduction-page"></a>
@@ -118,67 +115,45 @@ At that moment there is 3 levels.
 
 ![Hearths](AlphaProject/images/hearts.png)
 
-
   <a name="features"></a>
 # 2. Features
   [Go to the top](#table-of-contents)
  ### All 3 pages:
 
-#### 1st page:
-* Instructions
+#### Rocket Launcher Experience:
 
-The first page explains how to play the quiz.
+Command a rocket with precision through a visually stunning galactic landscape.
 
-#### 2nd page:
-* Questions
+#### Health Management:
 
-The second page is presented with a question and 4 answers to choose and a button to continue.
+Navigate wisely! You have three health bars, and each collision with obstacles inflicts one damage. Can you strategically navigate to preserve your health and conquer the challenges?
 
+#### Dynamic Obstacles:
 
+Face moving obstacles that add an extra layer of excitement and challenge to your cosmic adventure.
 
-#### 3rd page:
-* Result page
+#### Objective:
 
-The final page is with the results of your game and with two buttons to start over the game.
+Your primary mission is to successfully navigate the map, avoiding damage and ultimately steering your rocket into the coveted blue box.
 
-#### Language:
-Website contain 1 language
-* English
+#### Instructions:
 
-#### Logo:
-ask.Js is placed on the bottom left corner and has an animation.
+* Launch the game and take control of the rocket.
+* Navigate through the galaxy, avoiding obstacles to preserve your health.
+* Reach the blue box to complete the level and achieve victory.
 
-#### Background color:
-Background is animated with different colors and qubes animation.
-
-
-### The quiz box:
-- The quiz box has an animation with the answers and the box is moving from the right side for a moment.
-
-
-### Result box:
-- Result box has an animation with the box moving from the right side for a moment.
-
-### Logo
-- ask.Js logo is animated and moving while you move your mouse.
 
 <a name="technologies-used"></a>
 # 3. Technologies Used
   [Go to the top](#table-of-contents)
 
-* [HTML5](https://en.wikipedia.org/wiki/HTML5) (markup language) was used for structuring and presenting content of the website.
+* [Unity](https://unity.com/) is a widely used cross-platform game development engine.
 
-* [CSS3](https://en.wikipedia.org/wiki/CSS) (Cascading Style Sheets) was used to provide the style to the content written in a HTML.
+* [Unity Store](https://assetstore.unity.com/) is an online marketplace provided by Unity Technologies.
 
-* [JavaSCript](https://en.wikipedia.org/wiki/JavaScript) JavaScript often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+* [C Sharp](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) is a modern, versatile, and object-oriented programming language developed by Microsoft.
 
-* [Wireframe](https://wireframe.cc/) was used to create wireframes of the website.
-
-* [Google Fonts](https://fonts.google.com/) was used to import font-family 'Krona One' into style,css file and which was used throughout the pages of the website.
-
-* [Font Awesome](https://fontawesome.com/) was used to import icons to the sites.
-
-* [Chrome](https://www.google.com/intl/en_uk/chrome/) was used to debug and test the source code using HTML5 as well as to test site responsiveness.
+* [Free Sound](https://freesound.org/) was used to download audio for the game.
 
 * [Github](https://github.com/) was used to create the repository and to store the project's code after pushed from Git.
 
@@ -188,63 +163,16 @@ Background is animated with different colors and qubes animation.
 # 4. Testing
   [Go to the top](#table-of-contents)
 
-## 4.1 Testing using tools
-
-### 4.1.1 Google Developer Tools
-I make use of google developer tools (Chrome DevTools). 
-
-### 4.1.2 Responsive Tools
-
-In order to make sure that design web pages are responsive, [Am I Responsive](http://ami.responsivedesign.is/) page was used to check it. 
-Also checked with a mobile phone Huawei p40 lite.
-
-### 4.1.3 W3C Validator Tools
-
-[W3C Markup](https://validator.w3.org/#validate_by_input+with_options) was used to check for any errors with my HTML pages.
-
-See the pictures below:
-
-![html](assets/images/html.png)
-
-The HTML checker showed a perfect result.
-
-[W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used to check for any error within my css file. I have a couple of errors with setting a property for margin in - 15px, and setting a font-weight with a property with px.I have a few warnings in the css file though.
-
-
-
-See the pictures below:
-
-![css](assets/images/css.png)
-![css](assets/images/css-warn.png)
-
-### 4.1.4 Js Hint validator
-
-[Js Hint](https://jshint.com/) was used to check the js file for any error.I had one problem that i forgot to write the semicolon.
-
-See the picture below:
-
-![css](assets/images/jshint.png)
-
-## 4.2 Tests
-
-Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used in throughout the website are easy to read and accessible.
-
-![test](assets/images/lightgouse-dekstop.png)
-![test](/assets/images/lighthouse-mob.png)
-
 # 5. Bugs
  [Go to the top](#table-of-contents)
 
+* Background music starting to play over again at the next stage of the game. Will be fixed in 1.0 Version.
+
   ### Solved bugs
-- I had a few problems with a path to images.
-- I had a bug with a setTiomeOut function in a js file with a timer, the start animation didn't work properly. Fixed with playing with different timer options.
 
- 
-See the gif bellow:
+* There was a problem with heart images for health indicator, to fix it I rotated 3 images in order to display 3 hearts, and then created a list in C Sharp script.
+* I had a bug with a particle sound, the audio were playing in loop, to fix it I used PlayOneShot(soundExample) and if statement.
 
-![test](/assets/images/bug.gif)
-
-I decided to make a fixed qube around Js, there is a lot a qubes already hanging around the page.
 
 ### Manual Testing
 
@@ -252,33 +180,21 @@ I decided to make a fixed qube around Js, there is a lot a qubes already hanging
 
 | Feature                | Outcome                                                 | Pass/Fail|
 |:----------------------:|:-------------------------------------------------------:| ---      |
-| Animation at the start | Animation qube is working as expected.                  | Pass     |
-| Background animation   | Background animation with qubes are working as expected | Pass     |
-| Animation with answers | Animation is working as expected.                       | Pass     |
-| Animation boxes        | Animation quiz and result boxes are working as expected.| Pass     |
-| Animation logo         | Animation logotype is working as expected.              | Pass     |
+| Background Sound       | Background sound working as expected                    | Pass     |
+| Next Level Loading     | Next level loads as expected                            | Pass     |
+| Particles              | Particles animation work as expected                    | Pass     |
+| Health animation       | Health animaton working as expected                     | Pass     |
+| Object falling         | Player object fall down if trigger the obstacle         | Pass     |
 
    
-- Button Section
+- Object Section
 
 Feature | Outcome | Pass/Fail
 --- | --- | ---
-Start Quiz Button| Links to game section, work as expected. | Pass
-Next Button | Links to the next question, work as expected. | Pass
-Try Again Button | Links to the start of the quiz  | Pass
-Go to Home  | No appearance, responsiveness nor functionality issues. | Pass
-
-- Result Section
-
-Feature | Outcome | Pass/Fail
---- | --- | ---
-Total Questions| Links to game section, work as expected. | Pass
-Attempt | Links to the next question, work as expected. | Pass
-Correct | Links to the start of the quiz  | Pass
-Wrong | Count user wrong answers. | Pass
-Percentage | Count user percentage statistic | Pass
-Your total score | Counts user total score | Pass
-
+Rocket | Flying in X, Y rotation, works as expected | Pass
+Obstacle | Deals damage to player object, work as expected. | Pass
+Landing box | Jump over to next level, works as expected  | Pass
+Launch box  | No hurt to player object, works as expected. | Pass
 
 [Go to the top](#table-of-contents)
 
@@ -286,9 +202,9 @@ Your total score | Counts user total score | Pass
 # 6. GitHub
   [Go to the top](#table-of-contents)
 
-The web was deployed to GitHub pages:
-- Sharing of mine profile here - https://github.com/DenysRudenko
-- The live link can be found here - (https://github.com/DenysRudenko/Project-2)
+Game was deployed to GitHub pages in GH-PAGES branch:
+- Sharing of mine repository here - https://github.com/DenysRudenko/Unity_Project_Alpha
+- The live link can be found here - (https://denysrudenko.github.io/Unity_Project_Alpha/)
 
   <a name="info"></a>
 # 7. Information
