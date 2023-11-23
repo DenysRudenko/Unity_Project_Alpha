@@ -725,6 +725,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: damageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 25360db9eee5a0340a343e13398fa1e7, type: 3}
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: 25360db9eee5a0340a343e13398fa1e7, type: 3}
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: attentionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 25360db9eee5a0340a343e13398fa1e7, type: 3}
+    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: hearts.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -743,19 +755,15 @@ PrefabInstance:
     - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: hearts.Array.data[3]
       value: 
-      objectReference: {fileID: 1992156925}
-    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-      propertyPath: hearts.Array.data[4]
-      value: 
-      objectReference: {fileID: 2005482667}
-    - target: {fileID: 1268491140084567461, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
-      propertyPath: hearts.Array.data[5]
-      value: 
       objectReference: {fileID: 1421127575}
     - target: {fileID: 1775580320051236102, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1640677142}
+    - target: {fileID: 1775580320051236102, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
+      propertyPath: attentionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 25360db9eee5a0340a343e13398fa1e7, type: 3}
     - target: {fileID: 5357272087694485583, guid: 12ebf54e89e7e1c4fa61cba325ea14fd, type: 3}
       propertyPath: m_Name
       value: Rocket
