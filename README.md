@@ -5,27 +5,26 @@ Alpha version of the project for TUD
 This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/Unity_Project_Alpha/).
 
 ## Introduction
-**Galaxy Launcher** is a Unity game......
+**Galactic Rocket Adventure** is a interstellar journey Unity game. Pilot a powerful rocket through a vast galaxy, overcoming dynamic obstacles to reach the ultimate destination - a mesmerizing blue box that marks your triumph.
 
-'We think we are creating the system for our own purposes. We believe we are making it in our own image... But the computer is not really like us. It is a projection of a very slim part of ourselves: that portion devoted to logic, order, rule, and clarity.'
-
--Ellen Ullman, Close to the Machine: Technophilia and its Discontents
-
-![website preview](assets/images/responsive.png)
+![website preview](AlphaProject/images/main.png)
 
 ## Table of Contents 
 
 # Table of Contents
-- [1. Who will be interested in visiting the website?](#interested)
-    - [User experience:](#user-exp)
+- [1. Who will be interested in playing this game?](#interested)
+    - [User Experience:](#user-exp)
     - [User Goals:](#user-goals)
     - [User Expectations:](#user-expectations)
-    -	[Colour scheme](#color-scheme)
-    - [Animation](#animation)
-    - [Site skeleton (wireframes)](#wireframes)
-    - [Introduction page](#introduction-page)
-    - [Result](#result)
-- [2. Features](#features)
+    -	[Audio](#audio)
+    - [Prefabs](#prefabs)
+    - [Objects](#objects)
+    - [Levels](#levels)
+    - [Images](#images)
+- [2.Game Features](#gamefeatures)
+    - [Movement script](#Movement)
+    - [CollisionHandler script](#collision)
+    - [Health](#health)
 - [3.Technologies used](#technologies-used)
 - [4.Testing](#testing)
 - [5.Bugs](#bugs)
@@ -35,131 +34,89 @@ This game is designed for TuD as [Alpha Project](https://denysrudenko.github.io/
 
   
 <a name="interested"></a>
-# 1. Who will be interested in visiting the website?
+# 1. Who will be interested in playing this game??
   [Go to the top](#table-of-contents)
-* users who wants to check their knowledge of JavaScript 
-* people who looking for interview of JavaScript developing 
-* people who want to learn more about the JavaScript 
+* Space Enthusiasts: Individuals with a fascination for space exploration and the cosmos may be drawn to the immersive galactic setting of your game. 
+* Arcade Game Fans will get feel with quick and engaging gameplay, it could attract those who enjoy classic arcade games.
 
 
 <a name="user-exp"></a>
 ## 1.1 User experience 
    [Go to the top](#table-of-contents)
 
-In the modern world there are a lot of educational books and resources for knowledge. This website can help with learning JavaScript. There are 3 pages on the website which include 'Instruction','Questions','Result'. The user has the ability to start all over again by pressing the buttons.
-
+Ensuring a positive user experience (UX) is crucial for the success of any game.
 
 <a name="user-goals"></a>
 ## 1.2 User Goals
   [Go to the top](#table-of-contents)
 
-My main goal during the project was creation of the basic questions about JavaScript. There are a lot more questions that will be added in the future.
+My main goal is creating a fun and entertaining game experience for players who enjoy space-themed adventures and challenging gameplay.
 
 
 <a name="user-expectations"></a>
 ## 1.3 User Expectations
    [Go to the top](#table-of-contents)
 
-The choice of the color scheme for the website I took from 'Instagram' posts.
- 
-The website contains information about functions,switch construction,arrays,variables. Why do we need the version control system GIT?
-* all pages are easily accessible
-* the interface is easily navigated
-* responsive design for all screen/device sizes
+The main user Expectations:
+* Intuitive Controls.
+* Visual Appeal.
+* Engaging Sound Effects and Music.
+* Progressive Difficulty.
 
-
-<a name="color-scheme"></a>
-## 1.4 Color Scheme
+<a name="audio"></a>
+## 1.4 Audio
   [Go to the top](#table-of-contents)
 
-![color pallete](assets/images/color.png)
+In our Unity game, cool space music kicks in the moment your mission begins. 
 
-
-The choice of the color scheme for the website I took from 'Instagram' posts.
-
-<a name="animation"></a>
-## 1.5 Animation
+<a name="prefabs"></a>
+## 1.5 Prefabs
   [Go to the top](#table-of-contents)
 
-I decided to create a nice animation in the background, so the user doesn't feel so bored while answering the questions. I looked up for animation in google and found a list of them [here](https://alvarotrigo.com/blog/animated-backgrounds-css/).
+There is a 3 main prefabs at that moment:
+* Explosion
+* Success
+* Engine
 
-What did i do?
-* Created a background animation(Thank`s google for good examples)
-* Created a loading animation.
-* The boxes with questions is animated.
-* The logo is animated.
+![Explosion](AlphaProject/images/boom.png)
+![Success](AlphaProject/images/success.png)
+![Engine](AlphaProject/images/engline.png)
 
-![color pallete](assets/images/animation.gif)
 
-<a name="wireframes"></a>
-## 1.6 Site Skeleton
+What did we do?
+* Created an explosion when game object hits the obstacle.
+* Created an success explosion when object landing at blue box.
+* Created an engine thrust when rocket flying.
+
+
+<a name="objects"></a>
+## 1.6 Objects
   [Go to the top](#table-of-contents)
 
-[Wireframe](https://wireframe.cc/) was used to create wireframes of the website. This was very useful as you can quickly make an example of your website.
+There is a 4 main objects at that moment:
+* Rocket
+* Launch box
+* Landing box
+* Obstacle
+
+![Rocket and Launch box](AlphaProject/images/rocketLaunch.png)
+![Landing box](AlphaProject/images/engline.png)
+![Obstacle](AlphaProject/images/obtacle.png)
 
 <a name="introduction-page"></a>
-## Introduction Page
+## Levels
 
-### Desktop
+At that moment there is 3 levels.
+![1 Level](AlphaProject/images/1level.png)
+![2 Level](AlphaProject/images/2level.png)
+![3 Level](AlphaProject/images/3level.png)
+
+### Images
    [Go to the top](#table-of-contents)
 
-* Animation logo
+* Hearths icons
 
-![animation-logo](assets/images/wire1.png)
-
-* First page
-
-![1st_page](assets/images/wire2.png)
-
-* Second page
-
-![2nd_page](assets/images/wire3.png)
-
-* Third page
-
-![3rd_page](assets/images/wire4.png)
-
-
-<a name="result"></a>
-## Result
-
-### Desktop
-
-* Animation
-
-![home](assets/images/1.png)
-
-* 1st page
-
-![home](assets/images/2.png)
-
-* 2nd page
-
-![home](assets/images/3.png)
-![home](assets/images/4.png)
-
-* 3rd page
-
-![home](assets/images/5.png)
-
-### Mobile
-
-* Animation
-
-![home](assets/images/mob1.png)
-
-* 1st page
-
-![home](assets/images/mob2.png)
-
-* 2nd page
-
-![home](assets/images/mob3.png)
-![home](assets/images/mob4.png)
-
-* 3rd page
-
-![home](/assets/images/mob5.png)
+![Hearths](AlphaProject/images/hearts.png)
 
 
   <a name="features"></a>
