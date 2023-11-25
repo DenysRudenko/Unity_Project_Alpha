@@ -209,31 +209,40 @@ Game was deployed to GitHub pages in GH-PAGES branch:
   <a name="info"></a>
 # 7. Information
  [Go to the top](#table-of-contents)
-### Code
-* The documentation for animation at the start of the page readed from here https://stackabuse.com/loading-animation-in-vanilla-javascript/
-* The code for timeout function for animated qube from here https://coderwall.com/p/_ppzrw/be-careful-with-settimeout-in-loops
-* The design idea for logo i took from this page https://alvarotrigo.com/blog/css-text-animations/
-* The design idea for pages was taken from https://www.goodkindtattoo.com/
-* For README.md file, reference of https://github.com/DenysRudenko/Project-1 and https://github.com/josswe26/rpsls
-* A big thank you to mentor Marcel Mulders for tips and for supporting a project I made.
-* The quiz idea and some examples of code came from watching that video https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified
+
+### Reference
+* Link for audio that working with rocket(rocket boost) https://freesound.org/people/qubodup/sounds/146770/
+
+* Retro background music https://freesound.org/people/sonically_sound/sounds/624874/
+
+* Heart youtube tutorial that helped to implevement the health functionality https://www.youtube.com/watch?v=BLfNP4Sc_iA&t=12s
+
 
 
 <a name="#future"></a>
 # 8. Future
 [Go to the top](#table-of-contents)
 
-### Questions
-* Increase the amount of questions with examples of code.
+### Feul Bar
+* Develop the fuel bar for rocket(timer/button pressing).
 
-### Timer
-* Develop a timer for every question.
+### Levels
+* Develop more levels with different difficulty.
 
-### Achievements
-* Develop achievements for answering correctly.
+### Obstacles
+* Create a movement script for obstacles, so the game will be much harder.
 
-### Clues
-* Develop clues with a link with documentation.
+### Fuel Pick Up
+* Create a fuel pick up functionality.
 
-### Profile
-* Develop the personal profile page with a percentage of success.
+### Lights Feuture
+* Create more lights in level to make level become more nicer.
+
+### Menu
+* Create a menu for game with buttons, such as: "New Game", "Quit Game", "Shop".
+
+### Main Menu Scene
+* Create a menu scene background, would be nice if its gonna be animated.
+
+### Implement Sounds
+* Implement more sounds and create a more immersive audio experience.
