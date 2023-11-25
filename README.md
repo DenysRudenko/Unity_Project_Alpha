@@ -183,6 +183,16 @@ In this method we updating the hearth images using for counter. Using the Length
 
 In this method we sowing the number of hearts we have. At the start of the script we have a variable "numOfHearts". The max number of hearts could be 3. If we want to include 10 hearts for example, we shoul update the images in Canvas.
 
+### Student Work
+
+#### Mario
+
+Created a particle methods for left thrust and right thrust and also included all particles working.
+
+#### Denys
+
+Developed and created all levels, rocket object, obstacles, starting position and finish position etc.
+
 ### General Information
 
 #### Rocket Launcher Experience:
