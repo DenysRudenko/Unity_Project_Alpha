@@ -115,10 +115,75 @@ At that moment there is 3 levels.
 
 ![Hearths](AlphaProject/images/hearts.png)
 
-  <a name="features"></a>
+  <a name="gamefeatures"></a>
+
 # 2. Features
   [Go to the top](#table-of-contents)
- ### All 3 pages:
+
+### Movement script
+
+#### ProcessThrust()
+
+This method developed for rocket that helps user to control it. To control the rocket user should press "Space" button. Also there is included if statements for rocket sound and rocked particle.
+
+#### ProcessRotation()
+
+This method developed to help user to control rocket left and right, the buttons set to "A" and "D". Also included if statements for left particle and right particle.
+
+#### ApplyRotation()
+
+Freezing and unfreezing rotation is a technique used to prevent conflicts between manual and physics-based rotations.
+
+### Collision Handler script
+
+#### OnCollisionEnter()
+
+This method developed for our playing object to to trigger with other elements in the game. Such as: obstacles, starting position, ending position, fuel objects. Everything developed in the switch statement. The tags are: "Friendly", "Finish", "Fuel" and default.
+
+#### HearthLoss()
+
+In this method we implement the functionality for health, this method trigger the other method from Health script for taking damage. There is if statement that checks our health, if health is 0, we start StartCrashSequence() method.
+
+#### StartCrashSequence()
+
+This method developed for crash situation for rocket object and also reaload the level to the starting position. The audio source for playing rocket thurster stops and crash particle appear.
+
+#### StartSuccessSequence()
+
+This method developed for success situation for rocket object and also start new level. The audio source for playing rocket thurster stops and success particle appear.
+
+#### ReloadLevel()
+
+This method stand for reloading the scene. We load our scene through the index.
+
+#### LoadNextLevel()
+
+To load next level we adding 1 to the current index.
+
+#### DisableGameObject()
+
+This method is for disable the game object. Its not implemented yet.
+
+### Health script
+
+#### TakeDamage()
+
+In this method we implemented damage. Also we included the check for health that doesnt go below 0.
+
+#### UpdateHearts()
+
+In this method we updating the health-hearts status, using following methods: ClampMaxHealth(), UpdateHeartSprites(), DisplayHearts().
+
+
+#### UpdateHeartSprites()
+
+In this method we updating the hearth images using for counter. Using the Length of hearts list. Including full hearts and empty Hearts.
+
+#### DisplayHearts()
+
+In this method we sowing the number of hearts we have. At the start of the script we have a variable "numOfHearts". The max number of hearts could be 3. If we want to include 10 hearts for example, we shoul update the images in Canvas.
+
+### General Information
 
 #### Rocket Launcher Experience:
 
